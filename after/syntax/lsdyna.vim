@@ -4,12 +4,12 @@
 "
 " Language:     Ls-Dyna FE solver input file
 " Maintainer:   Bartosz Gradzik (bartosz.gradzik@hotmail.com)
-" Version:      1.0.0
+" Version:      1.0.1
 " Last Change:  2nd of May 2026
 "
 " History of change:
 " 02-May-2026
-"   - Rewrite to prevent overriding user color theme.
+"   - Mason C: Rewrite to prevent overriding user color theme.
 " 22-May-2016
 "   - initial release (v1.0.0)
 "-------------------------------------------------------------------------------

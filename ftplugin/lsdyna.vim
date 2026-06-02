@@ -4,8 +4,13 @@
 "
 " Language:     LS-Dyna FE solver input file
 " Maintainer:   Bartosz Gradzik <bartosz.gradzik@hotmail.com>
-" Last Change:  7th of January 2021
-" Version:      2.0.0
+" Last Change:  2nd of May 2026
+" Version:      2.0.1
+"
+" History of change:
+" 02-May-2026
+"   - Mason C: Update for minimal (sane) overrides of modern user editor
+"   customisations.
 "-------------------------------------------------------------------------------
 
 " source guard
@@ -68,11 +73,12 @@ setlocal shiftwidth=10
 setlocal textwidth=80
 
 setlocal listchars=tab:>.,space:.,trail:.
-setlocal colorcolumn=10,20,30,40,50,60,70,80
+setlocal colorcolumn=1,11,21,31,41,51,61,71,81
 
 "-------------------------------------------------------------------------------
 "    AUTOCOMPLETE
 "-------------------------------------------------------------------------------
+
 " Autocomplete menu appearance and behaviour
 setlocal previewheight=20 " Preview window height
 setlocal wildmode=list,full " Show autocomplete menu
