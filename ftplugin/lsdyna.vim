@@ -47,45 +47,41 @@ endif
 let g:lsdynaCommentString = '$-->'
 
 "-------------------------------------------------------------------------------
-"    COLORS
+"    OS AND FILE PATH SETTINGS
+"-------------------------------------------------------------------------------
+" TODO: Review and update or remove.
+
+setlocal shellslash " Enables windows style (\) file paths (TODO: Fix for linux.)
+execute 'setlocal tags='..split(&rtp,',')[0]..'/.dtags'
+
+"-------------------------------------------------------------------------------
+"    EDITOR SETTINGS
 "-------------------------------------------------------------------------------
 
-syntax on
-colorscheme lsdyna
-
-"-------------------------------------------------------------------------------
-"    MAIN SETTINGS
-"-------------------------------------------------------------------------------
-
-setlocal nocompatible
-setlocal incsearch
-setlocal hlsearch
-setlocal ignorecase
-setlocal smartcase
-setlocal hidden
+setlocal list
 setlocal expandtab
+setlocal noautoindent
+setlocal virtualedit=all " Allow cursor to move to non-character positions.
+
 setlocal tabstop=10
 setlocal shiftwidth=10
-setlocal virtualedit=all
-setlocal noautochdir
-setlocal noautoindent
-setlocal shellslash
-setlocal cursorline
-setlocal backspace=2
-setlocal wildmode=list,full
 setlocal textwidth=80
-setlocal listchars=tab:>-,trail:-
-setlocal statusline=%F%m%r%h%w%=\ [%02n][%{&ff}\/%Y][%06l\/%06L,\%02v][%03p%%]
-setlocal laststatus=2
-setlocal list
-setlocal completeopt=menuone,noinsert
-setlocal previewheight=20
+
+setlocal listchars=tab:>.,space:.,trail:.
+setlocal colorcolumn=10,20,30,40,50,60,70,80
+
+"-------------------------------------------------------------------------------
+"    AUTOCOMPLETE
+"-------------------------------------------------------------------------------
+" Autocomplete menu appearance and behaviour
+setlocal previewheight=20 " Preview window height
+setlocal wildmode=list,full " Show autocomplete menu
+setlocal completeopt=menuone,noinsert " Select autocompletion before inserting.
+
+" Customise autocomplete functions.
 "setlocal completepopup=align:menu,border:off
 setlocal omnifunc=lsdyna_complete#Omnifunc
 setlocal completefunc=lsdyna_complete#Completefunc
-execute 'setlocal tags='..split(&rtp,',')[0]..'/.dtags'
-highlight QuickFixLine guifg=NONE guibg=NONE
-setlocal winaltkeys=no
 
 "-------------------------------------------------------------------------------
 "    FOLDING
